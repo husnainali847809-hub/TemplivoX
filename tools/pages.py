@@ -180,8 +180,8 @@ def build_home():
 <div class="row"><input id="news-email" type="email" placeholder="you@example.com" disabled><button type="button" class="btn" disabled>Coming soon</button></div>
 <p id="news-note" class="small">No emails are collected on this website.</p></form></div></div></section>
 '''
-    page("index.html", "TemplivoX | Free Printable Planners, Trackers & Templates",
-         "Download free printable planners, budget trackers, calendars and business templates as PDF, Word and Excel files from TemplivoX.",
+    page("index.html", "Free Printable Planners & Excel Templates | TemplivoX",
+         "Download free daily and weekly planners, budget trackers, calendars and editable Excel, Word and PDF templates. Free files, no sign-up required.",
          body, extra_ld=[
              {"@type": "WebSite", "name": "TemplivoX", "url": BASE + "/", "description": "Free printable planners, trackers, calendars and editable templates in PDF, Word and Excel formats.", "inLanguage": "en"},
              {"@type": "Organization", "name": "TemplivoX", "url": BASE + "/", "email": EMAIL}])
@@ -494,21 +494,21 @@ Then visit http://localhost:8000
 
 ## Publish on GitHub Pages
 
-1. Create a repository named `husnainali847809-hub.github.io` (this exact name is required for the root GitHub Pages address you provided).
+1. Keep this project in the `husnainali847809-hub/TemplivoX` repository.
 2. Upload everything inside this folder (drag and drop in the browser, or use `git add . && git commit && git push`).
 3. Open Settings > Pages, choose "Deploy from a branch", branch `main`, folder `/ (root)`, and save.
-4. After a minute your site is live at `https://husnainali847809-hub.github.io/`.
+4. After a minute your site is live at `https://husnainali847809-hub.github.io/TemplivoX/`.
 
 ## Site configuration
 
 This project is already configured for:
 
-- Website: `https://husnainali847809-hub.github.io/`
+- Website: `https://husnainali847809-hub.github.io/TemplivoX/`
 - Contact: `husnainali847809@gmail.com`
 
 Canonical URLs, Open Graph metadata, structured data, `sitemap.xml`, `robots.txt` and contact details are set to these values. If you change the repository name or domain later, update `BASE` and `EMAIL` in `tools/data.py` before rebuilding the site.
 
-After publishing, add the site to Google Search Console and submit `https://husnainali847809-hub.github.io/sitemap.xml`.
+After publishing, add the site to Google Search Console and submit `https://husnainali847809-hub.github.io/TemplivoX/sitemap.xml`.
 
 ## About the download files
 
