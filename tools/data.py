@@ -1,6 +1,6 @@
-BASE = "https://husnainali847809-hub.github.io"
+BASE = "https://husnainali847809-hub.github.io/TemplivoX"
 EMAIL = "husnainali847809@gmail.com"
-UPDATED = "2026-11-02"
+UPDATED = "2026-11-08"
 
 CATS = [
     ("study", "Study Templates", "study-templates.html",
