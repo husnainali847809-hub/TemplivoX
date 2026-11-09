@@ -2,6 +2,7 @@ import json, os
 from html import escape as E
 from PIL import Image, ImageDraw, ImageFont
 from data import *
+from seo_keywords import KEYWORDS
 
 ROOT = "."
 FMT = {"pdf": "PDF", "docx": "Word", "xlsx": "Excel"}
@@ -240,9 +241,12 @@ def build_template_pages():
         steps = "".join(f"<li>{E(x)}</li>" for x in steps)
         rh = "".join([grid(rel, d)])
         fl = "PDF, Word & Excel" if "xlsx" in t["fmts"] else "PDF & Word"
-        title = f"Free Printable {t['title']} ({fl})"
-        if len(title) + 12 <= 66: title += " | TemplivoX"
-        desc = (t["short"] + " " + t["more"])[:155].rsplit(" ", 1)[0] + "..." if len(t["short"] + t["more"]) > 158 else t["short"] + " " + t["more"]
+        kw = KEYWORDS.get(s, {})
+        primary = kw.get("primary", t["title"].lower() + " template")
+        title = f"Free {primary.title()} | Printable {fl}"
+        if len(title) > 62:
+            title = f"Free {primary.title()} | {fl}"
+        desc = kw.get("description", (t["short"] + " " + t["more"])[:155].rsplit(" ", 1)[0] + "...")
         body = f'''<article>
 <section class="page-head"><div class="wrap"><h1>{E(t['title'])}</h1><p class="lead">{E(t['short'])} {E(t['more'])}</p></div></section>
 <section class="sec"><div class="wrap tpl">
